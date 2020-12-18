@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    font-family: "Lato-bold";
+    background-color: #F8E5E5;
+     /* just to show position fixed working */
+    height: 2000px;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+#header{
+    background-color: #FA255E; 
+    color: #f1f1f1;
+    display: flex;
+    justify-content: left;
+    position: fixed; 
+    width: 100%;
+    margin-top: 0;
+}
+#header ul{
+    list-style: none;
+    margin-left: 600px;
+}
+#header li{
+    display: inline; 
+}
+#header a{
+    text-decoration: none;
+    color: #f1f1f1; 
+    padding: 8px;
+    font-size: 20px;
+}
+#showcase{
+    /* margin-top: 100px; */
+    text-align: center;
+    max-width: 50%;
+    display: block;
+    align-content: center;
+    /* viewport-fit: 100mvh;
+    background-image: image(src="workers on the system.png"); */
+}
+#hello{
+    margin-top: 50px;
+}
