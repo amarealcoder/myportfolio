@@ -32,11 +32,11 @@ body{
   justify-content: center;
 }
 #header a{
-  color: #ffffff;
+  color: #f4f4f4;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  padding: 30px;
+  padding: 20px;
 }
 a:hover{
   cursor: pointer;
@@ -50,17 +50,23 @@ a:hover{
   color: #e8491d;
   font-size: 30px;
 }
-#home{
+/* #home{
   padding-top: 200px;
   text-align: center;
-  height: 450px;
+  height: 100vh;
   width: 100%;
-  background-image: url("portfolio_images/coral_light.png");
+  background-image: url("portfolio_images/woman_laptop.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #f4f4f4;
 }
+#hello{
+  font-size: 80px;
+  font-weight: bolder;
+  /* font-family: ; */
+/* } */
 
   img{
     border-radius: 50%;
-  }
+  } 
