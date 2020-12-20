@@ -18,6 +18,7 @@ body{
   border-bottom: #e8491d 3px solid;
   overflow: hidden;
   margin: 0 auto;
+  z-index: 1;
 }
 #header ul{
   list-style-type: none;
@@ -50,6 +51,255 @@ a:hover{
   color: #e8491d;
   font-size: 30px;
 }
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url("portfolio_images/working_woman1.png") repeat top left; 
+}
+.cb-slideshow li span { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: transparent;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: none;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div { 
+  z-index: 1000;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  animation: titleAnimation 36s linear infinite 0s; 
+}
+.cb-slideshow li div h1, h3 { 
+  font-family: 'JetBrains Mono', monospace;
+  color:#e8491d;
+  font-size: 25px;
+  line-height: 0.5rem;
+}
+.cb-slideshow li div h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.cb-slideshow li div p {
+  font-size: 20px;
+}
+.cb-slideshow li div button{
+  background-color: #e8491d;
+  border: 3px solid #fa9107;
+  height: 3rem;
+  width: 20rem;
+  font-size: 33px;
+  font-family: "Monospace";
+  font-weight: normal;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.cb-slideshow button:hover{
+background-color: #fccb3a;
+}
+.cb-slideshow li:nth-child(1) span { 
+  background-image: url("portfolio_images/working_woman1.png") 
+}
+.cb-slideshow li:nth-child(2) span { 
+  background-image: url("portfolio_images/working_woman2.png");
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+  background-image: url("portfolio_images/working_woman3.png");
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+  background-image: url("portfolio_images/working_woman4.png");
+  animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+  background-image: url("portfolio_images/working_woman5.png");
+  animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+  background-image: url("portfolio_images/working_woman6.png");
+  animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+  animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+  animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+  animation-delay: 30s; 
+}
+@keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  8% { opacity: 1; animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+  0% { opacity: 0 }
+  8% { opacity: 1 }
+  17% { opacity: 1 }
+  19% { opacity: 0 }
+  100% { opacity: 0 }
+}
+/* #home {
+  width: 100%;
+  height: 100vh;
+  background-color: #eeeeee;
+  margin: auto; 
+  background-image: url("portfolio_images/working_woman1.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #313030;  
+  z-index: -1; 
+  opacity: 0.6;
+  animation-name: imageAnimation; 
+  animation-duration: 36s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+.slide_div{
+  z-index: 1000;
+  position: absolute; 
+  width: 40%;
+  margin-left: 450px;
+  text-align: center;
+  top: 180px;
+   opacity: 0;  
+  color: #f4f4f4;
+  animation: titleAnimation 36s normal ease infinite;
+}
+#hello, #dev{
+  font-family: 'JetBrains Mono', monospace;
+  color:#e8491d;
+  font-size: 25px;
+  line-height: 0.5rem;
+}
+#name {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: bolder;
+}
+#description{
+  font-size: 20px;
+}
+.button{
+  background-color: #e8491d;
+  border: 3px solid #fa9107;
+  height: 3rem;
+  width: 20rem;
+  font-size: 33px;
+  font-family: "Monospace";
+  font-weight: normal;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.button:hover{
+background-color: #fccb3a;
+}
+#home:nth-child(1)  { 
+  background-image: url("portfolio_images/working_woman1.png");
+}
+#home:nth-child(2) { 
+  background-image: url("portfolio_images/working_woman2.png");
+  animation-delay: 6s; 
+}
+#home:nth-child(3) { 
+  background-image: url("portfolio_images/working_woman3.png");
+  animation-delay: 12s; 
+}
+#home:nth-child(4) { 
+  background-image: url("portfolio_images/working_woman4.png");
+  animation-delay: 18s; 
+}
+#home:nth-child(5) { 
+  background-image: url("portfolio_images/working_woman5.png");
+  animation-delay: 24s; 
+}
+#home:nth-child(6) { 
+  background-image: url("portfolio_images/working_woman6.png");
+  animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+  animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+  animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+  animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+  animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+  animation-delay: 30s; 
+}
+@keyframes imageAnimation { 
+  0% { opacity: 0; animation-timing-function: ease-in; }
+  8% { opacity: 1; animation-timing-function: ease-out; }
+  17% { opacity: 1 }
+  25% { opacity: 0 }
+  100% { opacity: 0 }
+} */
+/* @keyframes imageAnimation {
+0% {
+  background-position: 0 0;
+}
+16.66% {
+  background-position: 0 0;
+}
+33.32% {
+  background-position: -800px 0;
+}
+49.98% {
+  background-position: -800px 0;
+}
+66.64% {
+  background-position: -1600px 0;
+}
+83.30% {
+  background-position: -1600px 0;
+}
+100% {
+  background-position: 0 0;
+}
+} */
 /* #home{
   padding-top: 200px;
   text-align: center;
