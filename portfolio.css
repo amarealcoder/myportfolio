@@ -19,6 +19,7 @@ body{
   overflow: hidden;
   margin: 0 auto;
   z-index: 1;
+  top: 0;
 }
 #header ul{
   list-style-type: none;
@@ -53,16 +54,16 @@ a:hover{
 }
 .cb-slideshow,
 .cb-slideshow:after { 
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     top: 0px;
     left: 0px;
     z-index: 0; 
 }
 .cb-slideshow:after { 
-    content: '';
-    background: transparent url("portfolio_images/working_woman1.png") repeat top left; 
+  content: '';
+  background: url("portfolio_images/working_woman1.png") no-repeat top left; 
 }
 .cb-slideshow li span { 
   width: 100%;
@@ -73,7 +74,6 @@ a:hover{
   color: transparent;
   background-size: cover;
   background-position: 50% 50%;
-  background-repeat: none;
   opacity: 0;
   z-index: 0;
   animation: imageAnimation 36s linear infinite 0s; 
@@ -81,29 +81,33 @@ a:hover{
 .cb-slideshow li div { 
   z-index: 1000;
   position: absolute;
-  bottom: 30px;
-  left: 0px;
   width: 100%;
   text-align: center;
   opacity: 0;
   color: #fff;
   animation: titleAnimation 36s linear infinite 0s; 
+  width: 40%;
+  margin-left: 420px;
+  top: 180px;
 }
 .cb-slideshow li div h1, h3 { 
   font-family: 'JetBrains Mono', monospace;
   color:#e8491d;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 0.5rem;
+  background: transparent;
 }
 .cb-slideshow li div h2 {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
   font-weight: bolder;
+  background:transparent;
 }
 .cb-slideshow li div p {
   font-size: 20px;
+  background: transparent;
 }
-.cb-slideshow li div button{
+.cb-slideshow li div .button{
   background-color: #e8491d;
   border: 3px solid #fa9107;
   height: 3rem;
@@ -113,8 +117,9 @@ a:hover{
   font-weight: normal;
   cursor: pointer;
   letter-spacing: 2px;
-  margin-top: 30px;
+  top: 30px;
   margin-left: 100px;
+  position: relative;
 }
 .cb-slideshow button:hover{
 background-color: #fccb3a;
@@ -160,8 +165,8 @@ background-color: #fccb3a;
 }
 @keyframes imageAnimation { 
   0% { opacity: 0; animation-timing-function: ease-in; }
-  8% { opacity: 1; animation-timing-function: ease-out; }
-  17% { opacity: 1 }
+  8% { opacity: 3; animation-timing-function: ease-out; }
+  17% { opacity: 3 }
   25% { opacity: 0 }
   100% { opacity: 0 }
 }
