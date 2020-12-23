@@ -1,3 +1,4 @@
+/* css styles for laptops */
 body{
   font: 15px/1.5 Arial, Helvectica, sans-serif;
   padding-top: 0; 
@@ -54,11 +55,8 @@ body{
   color: #e8491d;
   font-size: 30px;
 }
-/* #home, #skills, #projects, #contact{
-  top: 20%;
-} */
-.cb-slideshow,
-.cb-slideshow:after { 
+.slideshow,
+.slideshow:after { 
   position: relative;
   width: 100%;
   min-height: 600px;
@@ -66,14 +64,14 @@ body{
   left: 0px;
   z-index: 0;
  }
-.cb-slideshow:after { 
+.slideshow:after { 
   content: '';
   background: url("portfolio_images/working_woman1.png") no-repeat top left; 
 }
-.cb-slideshow li{
+.slideshow li{
   list-style-type: none;
 }
-.cb-slideshow li span { 
+.slideshow li span { 
   width: 100%;
   height: 100%;
   position: absolute;
@@ -86,7 +84,7 @@ body{
   z-index: 0;
   animation: imageAnimation 36s linear infinite 0s; 
 }
-.cb-slideshow li div { 
+.slideshow li div { 
   z-index: 1000;
   position: absolute;
   text-align: center;
@@ -100,25 +98,25 @@ body{
   height: 100%;
   top: 135px;
 }
-.cb-slideshow li div h1, h3 { 
+.slideshow li div h1, h3 { 
   font-family: 'JetBrains Mono', monospace;
   color:#e8491d;
   font-size: 30px;
   line-height: 0.5rem;
   background: transparent;
 }
-.cb-slideshow li div h2 {
+.slideshow li div h2 {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
   font-weight: bolder;
   background:transparent;
   line-height: 0.8rem;
 }
-.cb-slideshow li div p {
+.slideshow li div p {
   font-size: 20px;
   background: transparent;
 }
-.cb-slideshow li div .button{
+.slideshow li div .button{
   background-color: #e8491d;
   border: 3px solid #fa9107;
   height: 3rem;
@@ -289,12 +287,14 @@ address a{
 address a:hover {
   background-color: transparent;
 }
+/* media queries for mobile phones */
 @media(max-width: 600px){
   #header ul{
     display: none;
   }
   #icon{
     display: block;
+    margin-left: 10px;
   }
   .cb-slideshow li div{
     width: 80%;
@@ -338,5 +338,45 @@ address a:hover {
   #contact{
     margin-top: 100px;
     height: 70vh;
+  }
+}
+
+/* media queries for tablets */
+@media(max-width: 961px){
+  #header ul{
+    display: none;
+  }
+  #icon{
+    display: block;
+    margin-right: 10px;
+  }
+  .cb-slideshow li div{
+    width: 80%;
+  }
+  .cb-slideshow li div .button{
+    margin-left: 25%;
+    top: 23px;
+  }
+  .slider {
+    top: 35rem;
+    margin-left: 35%;
+  }
+  .content1{
+    height: 85%;
+  }
+  .container2{
+    margin-top: 4rem;
+    margin-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    letter-spacing: 2px;
+  }
+  #projects h2{
+    margin-top: 100px;
+  }
+  #contact{
+    margin-top: 100px;
+    height: 65vh;
   }
 }
