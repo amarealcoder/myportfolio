@@ -4,18 +4,12 @@ body{
   margin: 0;
   background-color: #feebe9;
 }
-.container{
-  width: 80%;
-  margin: auto;  
-  overflow: hidden;
-}
 #header{
   position: fixed;
   width: 100%;
   background-color: #35424a;
   color: #ffffff;
-  /* padding-top: 0px; */
-  border-bottom: #e8491d 3px solid;
+   border-bottom: #e8491d 3px solid;
   overflow: hidden;
   margin: 0 auto;
   z-index: 1;
@@ -24,7 +18,7 @@ body{
 #header ul{
   list-style-type: none;
   padding: 0;
-  margin-left: 250px;
+  margin: 0;
   float: right;
 }
 #header li{
@@ -32,16 +26,24 @@ body{
   float: left;
   display: flex; 
   justify-content: center;
+  min-width: 40px;
 }
 #header a{
   color: #f4f4f4;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  padding: 20px;
+  padding: 2rem;
+} 
+#header a:hover{
+  background-color: #e8491d;
 }
-a:hover{
-  cursor: pointer;
+#icon{
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin-top: 15px;
+  display: none;
   background-color: #e8491d;
 }
 #logo{
@@ -52,11 +54,14 @@ a:hover{
   color: #e8491d;
   font-size: 30px;
 }
+/* #home, #skills, #projects, #contact{
+  top: 20%;
+} */
 .cb-slideshow,
 .cb-slideshow:after { 
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 600px;
   top: 0px;
   left: 0px;
   z-index: 0;
@@ -84,13 +89,15 @@ a:hover{
 .cb-slideshow li div { 
   z-index: 1000;
   position: absolute;
-  width: 100%;
   text-align: center;
   opacity: 0;
   color: #fff;
   animation: titleAnimation 36s linear infinite 0s; 
-  width: 40%;
-  margin-left: 390px;
+  display: block;
+  align-items: center; 
+  justify-content: center;
+  width: 90%;
+  height: 100%;
   top: 135px;
 }
 .cb-slideshow li div h1, h3 { 
@@ -119,36 +126,68 @@ a:hover{
   font-size: 33px;
   font-family: "Monospace";
   font-weight: normal;
-  cursor: pointer;
   letter-spacing: 2px;
-  top: 20px;
-  margin-left: 100px;
+  top: 35px;
+  margin-left: 35%;
   position: relative;
 }
-.cb-slideshow .button:hover {
-background-color: #fccb3a;
+.slider {
+  width: 300px;
+  text-align: center;
+  overflow: hidden;
+  display: inline;
+  top: 35rem;
+  margin-left: 40%;
+  position: relative;
+}
+.slider .slider-dots {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  background: #f4f4f4;
+  border-radius: 50%;
+  margin: 0 0 0.5rem 0;
+  position: relative;
 }
 .cb-slideshow li:nth-child(1) span { 
-  background-image: url("portfolio_images/working_woman1.png") 
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman1.png");
 }
 .cb-slideshow li:nth-child(2) span { 
-  background-image: url("portfolio_images/working_woman2.png");
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman2.png");
   animation-delay: 6s; 
 }
 .cb-slideshow li:nth-child(3) span { 
-  background-image: url("portfolio_images/working_woman3.png");
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman3.png");
   animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-  background-image: url("portfolio_images/working_woman4.png");
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman4.png");
   animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-  background-image: url("portfolio_images/working_woman5.png");
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman5.png");
   animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
-  background-image: url("portfolio_images/working_woman6.png");
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ), url("portfolio_images/working_woman6.png");
   animation-delay: 30s; 
 }
 
@@ -181,38 +220,16 @@ background-color: #fccb3a;
   19% { opacity: 0 }
   100% { opacity: 0 }
 }
-.slider {
-  width: 300px;
-  text-align: center;
-  overflow: hidden;
-  display: inline;
-  top: 35rem;
-  margin-left: 600px;
-  position: relative;
-}
-.slider > a {
-  display: inline-flex;
-  width: 1rem;
-  height: 1rem;
-  background: #f4f4f4;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  margin: 0 0 0.5rem 0;
-  position: relative;
-} 
-.skill_image{
-  width: 80px;
-  height: 80px;
-  border-radius: 150%;
-}
-
 #skills h2, #projects h2{
   text-align: center;
   font-size: 30px;
   color: #35424a;
   margin-top: 50px;
+} 
+.skill_image{
+  width: 80px;
+  height: 80px;
+  border-radius: 150%;
 }
 .container1{
   display: flex;
@@ -271,4 +288,55 @@ address a{
 }
 address a:hover {
   background-color: transparent;
+}
+@media(max-width: 600px){
+  #header ul{
+    display: none;
+  }
+  #icon{
+    display: block;
+  }
+  .cb-slideshow li div{
+    width: 80%;
+  }
+  .cb-slideshow li div .button{
+    margin-left: 13%;
+    top: 20px;
+  }
+  .slider {
+    top: 35.5rem;
+    margin-left: 33%;
+  }
+  #skills h2{
+    width: 60%;
+    margin-left: 19%;
+  }
+  .container1{
+    display: block;
+    height: 100%;
+  }
+  #projects h2{
+    width: 100%;
+    text-align: center;
+  }
+  .container2{
+    display: block;
+    margin-left: 8rem;
+    margin-top: 55px;
+  }
+  .project_image{
+    width: 250px;
+    height: 250px;
+    margin-top: 35px;
+  }
+  .container2{
+    letter-spacing: 2px;
+  }
+  .container2 p:hover{
+    width: 75%;
+  }
+  #contact{
+    margin-top: 100px;
+    height: 70vh;
+  }
 }
