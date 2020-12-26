@@ -10,27 +10,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 <body>
-    <div id ="header">
-        <div id="nav">
-            <h1 id ="logo">amarealcoder</h1>
-            <ul>
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#skills">My skills</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
-            <img id="icon" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" />
+    <div id="navbar">
+        <h1 id="logo">amarealcoder</h1>
+        <div class="navlinks-container">
+            <a class="navbar-links" href="#home">Home</a>
+            <a class="navbar-links" href="#skills">Skills</a>
+            <a class="navbar-links" href="#projects">Projects</a>
+            <a class="navbar-links" href="#contact">Contact</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">MENU
+                <i class="fa fa-caret-down"></i>
+              </button>
+            <div class="dropdown-content">
+                <a class="dropdown-links" href="#home">Home</a>
+                <a class="dropdown-links" href="#skills">Skills</a>
+                <a class="dropdown-links" href="#projects">Projects</a>
+                <a class="dropdown-links" href="#contact">Contact</a>
+            </div>
         </div>
     </div>
     <ul class="slideshow" id="home">
