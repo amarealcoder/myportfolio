@@ -1,9 +1,11 @@
-/* css styles for laptops */
-body{
+/* css styles for laptop/ bigger screens */
+
+body, html{
   font: 15px/1.5 Arial, Helvectica, sans-serif;
   padding-top: 0; 
   margin: 0;
   background-color: #feebe9;
+  overflow-x: hidden;
 }
 
 #navbar {
@@ -12,7 +14,6 @@ body{
   width: 100%;
   color: #ffffff;
   border-bottom: #e8491d 3px solid;
-  overflow: visible; 
   margin: 0;
   padding: 0;
   top: 0;
@@ -92,7 +93,13 @@ body{
  }
 .slideshow:after { 
   content: '';
-  background: url("portfolio_images/working_woman1.png") no-repeat top left; 
+  background: url("portfolio_images/working_woman1.png") no-repeat top left;
+  background-size: cover;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  image-rendering: -webkit-optimize-contrast;
 }
 .slideshow li{
   list-style-type: none;
@@ -141,7 +148,7 @@ body{
   text-align: center;
 }
 .slideshow li div p {
-  font-size: 20px;
+  font-size: 28px;
   background: transparent;
 }
 .slideshow li div .button{
@@ -163,7 +170,7 @@ body{
   overflow: hidden;
   display: inline;
   top: 35rem;
-  margin-left: 43%;
+  margin-left: 42%;
   position: relative;
 }
 .slider .slider-dots {
@@ -315,57 +322,94 @@ address a{
 address a:hover {
   background-color: transparent;
 }
-/* media queries for mobile phones */
- @media(max-width: 600px){
+/* media queries for mobile small */
+@media(max-width: 320px){
   #navbar .navbar-links {
     display: none;
   }
   .dropdown .dropbtn {
     display: block;
+    font-size: 22px;
+    padding: 18px;
+    margin-top: 10px;
+    padding-right: 5px;
   }
-  .slideshow li div{
-    width: 80%;
+  .slideshow li div h3{
+    font-size: 25px;
   }
-  .slideshow li div .button{
-    margin-left: 13%;
-    top: 20px;
-    width: 15rem;
+  .slideshow li .texts p{
+  text-align: center;
+  padding-right: 12%;
   }
-  .slider {
-    display: none;
+  .slideshow li .texts .button{
+    margin-left: 8%;
+    top: 25px;
+    width: 13rem;
   }
-
-  #skills h2{
-    width: 60%;
-    margin-left: 19%;
+  #projects .container2{
+    grid-template: none;
   }
-  .container1{
-    display: block;
-    height: 100%;
-  }
-  #projects h2{
-    width: 100%;
-    text-align: center;
-  }
-  .container2{
-    display: block;
-    margin-left: 8rem;
-    margin-top: 55px;
-  }
-  .project_image{
-    width: 250px;
-    height: 250px;
-    margin-top: 35px;
-  }
-  .container2{
-    letter-spacing: 2px;
-  }
-  .container2 p:hover{
-    width: 75%;
+  .container2 a{
+    font-size: 25px;
   }
   #contact{
-    margin-top: 100px;
-    height: 70vh;
+   margin-top: 120px;
+  } 
+}
+/* media queries for mobile medium */
+@media(max-width: 375px) {
+  .dropdown .dropbtn {
+    padding: 18px;
+    margin-top: 12px;
+    padding-right: 5px;
+  }
+  .slideshow li div h1, h3{
+    line-height: 2.5rem;
+    font-size: 20px;
+  }
+  .slideshow li .texts p{
+    padding-right: 15%;
+    font-size: 20px;
+  }
+  .slideshow li .texts .button{
+    margin-left: 18%;
+    top: 0px;
+    width: 10rem;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 25px;
+  }
+  #projects .container2{
+    grid-template: none;
+  }
+}
+
+/* media queries for mobile large */
+@media(max-width: 425px) {
+  .dropdown .dropbtn {
+    padding: 18px;
+    margin-top: 9px;
+    padding-right: 5px;
+  }
+  .slideshow li div h1, h3{
+    line-height: 2.5rem;
+    font-size: 25px;
+  }
+  .slideshow li .texts p{
+    padding-right: 8%;
+    font-size: 20px;
+  }
+  .slideshow li .texts .button{
+    margin-left: 26%;
+    top: 5px;
+    width: 10rem;
+    height: 2.5rem;
+    text-align: center;
+    font-size: 25px;
+  }
+  #projects .container2{
+    grid-template: none;
+    padding-left: 45px;
   }
 }
 
@@ -406,5 +450,15 @@ address a:hover {
   #contact{
     margin-top: 100px;
     height: 65vh;
+  }
+}
+/* media queries for laptop small */
+@media(max-width: 1024px){
+  .slideshow li .texts .button{
+    margin-left: 35%;
+  }
+  .slider {
+    top: 35rem;
+    margin-left: 42%;
   }
 }
